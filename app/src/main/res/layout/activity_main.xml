@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple_700"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/sendTo"
+        style="@style/Edit.Text.Style"
+        android:hint="@string/send_message_to"
+        app:layout_constraintBottom_toTopOf="@id/messageTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/sendTo"
+        android:src="@drawable/ic_email"
+        app:layout_constraintTop_toTopOf="@id/sendTo"
+        app:layout_constraintBottom_toBottomOf="@id/sendTo"
+        android:paddingEnd="10dp"/>
+
+
+    <EditText
+        android:id="@+id/messageTheme"
+        style="@style/Edit.Text.Style"
+        android:hint="@string/message_theme"
+        app:layout_constraintBottom_toTopOf="@id/messageText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/messageTheme"
+        android:src="@drawable/ic_theme"
+        app:layout_constraintTop_toTopOf="@id/messageTheme"
+        app:layout_constraintBottom_toBottomOf="@id/messageTheme"
+        android:paddingEnd="10dp"/>
+
+    <EditText
+        android:id="@+id/messageText"
+        style="@style/Edit.Text.Style"
+        android:hint="@string/message_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/messageText"
+        android:src="@drawable/ic_text"
+        app:layout_constraintTop_toTopOf="@id/messageText"
+        app:layout_constraintBottom_toBottomOf="@id/messageText"
+        android:paddingEnd="10dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage"
+        android:text="@string/send"
+        android:textColor="@color/black"
+        app:cornerRadius="5dp"
+        android:backgroundTint="@color/white"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

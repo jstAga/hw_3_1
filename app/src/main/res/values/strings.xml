@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">hw_3_1</string>
+    <string name="send_message_to">Send message to</string>
+    <string name="message_theme">Message theme</string>
+    <string name="message_text">Message text</string>
+    <string name="send">send</string>
+</resources>
+
+
